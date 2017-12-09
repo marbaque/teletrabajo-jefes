@@ -1241,6 +1241,7 @@ dl dd {
     margin: 0 0 0 30px; }
 
 .accordion-panel {
+  display: none;
   padding: 2em 1em; }
   .accordion-panel .panel-content {
     max-width: 680px;
