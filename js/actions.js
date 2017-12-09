@@ -12,6 +12,12 @@
 	    .not(':animated')                    // If it is not currently animating
 	    .slideToggle();                      // Use slide toggle to show or hide it
 	    
+	    //resize quiz height
+		$(window).resize(function() {
+		    $('.quiz-container').height($('.slide').height() + 80);
+		});
+	
+		$(window).trigger('resize');
 	    
 	});
 	
