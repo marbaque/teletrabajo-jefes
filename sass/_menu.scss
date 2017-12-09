@@ -149,6 +149,7 @@
 	text-indent: -5000px;
 	background: url(../images/burger.svg) no-repeat center center;
 	transition: all ease-in .15s;
+	flex-shrink: 0;
 	
 	@media screen and (min-width: $break-medium){
 		display: none;
@@ -174,5 +175,63 @@
 	display: block;
 	@media screen and (min-width:$break-medium){
 		display: none!important;
+	}
+}
+
+
+
+//pagination
+
+.pagination {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+	margin: 2em 0;
+	font-size: .8em;
+	a {
+		display: inline-block;
+		border: 2px solid $color-secundario;
+		padding: .5em 1em;
+		color: $color-secundario;
+		background: $gris2;
+		@include border(1.5em);
+		text-align: center;
+		&:hover,
+		&:focus{
+			background: $color-secundario;
+			color: $gris1;
+		}
+	}
+	.prev {
+		margin-right: auto;
+	}
+	.next{
+		margin-left: auto;
+	}
+	
+}
+
+.backtop {
+	position: fixed;
+	bottom: 2em;
+	right: -360px;
+	z-index: 199;
+	display: inline-block;
+	border-top: 2px solid $color-secundario;
+	border-left: 2px solid $color-secundario;
+	border-bottom: 2px solid $color-secundario;
+	padding: .5em 1em;
+	color: $color-secundario;
+	background: $gris2;
+	@include border(1.5em 0 0 1.5em);
+	text-align: center;
+	font-size: .8em;
+	&:hover,
+	&:focus{
+		background: $color-secundario;
+		color: $gris1;
 	}
 }

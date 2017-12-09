@@ -1,107 +1,57 @@
+@charset "UTF-8";
 /* 
 Diseñado por Mario Badilla
 mariobadilla.com 
 */
 
+//Import variables and mixins
+@import "variables-mixins";
 
-/* variables */
-$gris1: #f2f2f2;
-$gris2: #d6d6d6;
-$gris3: #808080;
-
-$color-principal: #1ccfc9;
-$color-secundario: #323c64;
-
-$color-texto1: #323c64;
-$color-texto2: #5b6383;
-$color-texto3: #848aa2;
-$color-texto-body: #333333;
-
-$color-interactive: #ea7b0c;
-
-$max: 1280px;
-
-$break-hd: 1200px;
-$break-large: 1000px;
-$break-medium: 750px;
-$break-small: 550px;
-$break-xsmall: 400px;
-
-@mixin border($radio){
-	-moz-border-radius: $radio;
-	-webkit-border-radius: $radio;
-	border-radius: $radio;
-
-  /* Prevent background color leak outs */
-  -webkit-background-clip: padding-box; 
-  -moz-background-clip:    padding; 
-  background-clip:         padding-box;
-}
-
-@-webkit-keyframes paneo {
-  0%   { background-position-x: 1344px; }
-  100% { background-position-x: 0; }
-}
-@-moz-keyframes paneo {
-  0%   { background-position-x: 1344px; }
-  100% { background-position-x: 0; }
-}
-@-o-keyframes paneo {
-  0%   { background-position-x: 1344px; }
-  100% { background-position-x: 0; }
-}
-@keyframes paneo {
-  0%   { background-position-x: 1344px; }
-  100% { background-position-x: 0; }
-}
+//Import skeleton styles
+@import "skeleton";
 
 
 /*-------------------------------Global-----------------------*/
 
 body{
 	background: $gris2;
-	font-size: 18px;
-	line-height: 1.5;
-	font-family: Helvetica, Arial, sans-serif;
-	color: $color-texto-body;
-	text-rendering: optimizeLegibility;
 }
 
 h1,h2,h3,h4,h5{
 	font-family: 'Roboto', sans-serif;
-	line-height: 1.2;
-	font-weight: 500;
-	letter-spacing: .5px;
-	text-rendering: geometricPrecision;
+	letter-spacing: .25px; 
 }
 h1{
 	color: $color-texto1;
-	line-height: 1;
+	line-height: 1.1;
 }
 h2{
 	color: $color-texto1;
-	line-height: 1;
+	line-height: 1.2;
 	font-size: 2em;
 }
 h3{
 	color: $color-texto2;
 	font-size: 1.5em;
+	letter-spacing: .5px;
 }
 h4 {
-	color: $color-texto3;
+	color: $color-texto2;
 	font-size: 1.2em;
 }
 
 a {
 	color: $color-texto-body;
 	border-bottom: 2px solid $color-texto-body;
+	text-decoration: none;
+	word-break: hyphenate;
+	word-wrap: break-word;
+	
 	&:hover {
 		color: $color-texto3;
 		border-color: $color-texto3;
 	}
 }
-
-
 
 
 // si se olvida el atributo alt en una imagen
@@ -124,6 +74,8 @@ img:not([alt]) {
 	background-color: $color-principal;
 	height: 90px;
 	border-bottom: 2px solid $color-secundario;	
+	box-shadow: 0px 5px 3px rgba(28, 28, 28, 0.2);
+	z-index: 10;
 	
 			
 	@media screen and (min-width: $break-medium){
@@ -141,8 +93,7 @@ img:not([alt]) {
 		position: relative;
 		overflow: visible;
 		
-		box-shadow: 0px 5px 3px rgba(28, 28, 28, 0.2);
-		z-index: 10;
+		
 		
 		
 		&::after{
@@ -165,8 +116,14 @@ img:not([alt]) {
 			align-items: center;
 			position: relative;
 			
-			
-			
+			a:link,
+			a:focus,
+			a:hover {
+				text-decoration: none;
+				border: 0;
+				color: $color-secundario;
+			}
+
 			.logo{
 				background: url(../images/logo-sm.svg) no-repeat left top;
 				width: 66px;
@@ -186,17 +143,12 @@ img:not([alt]) {
 				font-size: 20px;
 				line-height: 1;
 				color: $color-secundario;
-				margin: 0;
+				margin: 0 10px 0 0;
 				display: inline-block;
 				background-size: 50px;
+				letter-spacing: 0.2px;
 				
-				a:link,
-				a:focus,
-				a:hover {
-					text-decoration: none;
-					border: 0;
-					color: $color-secundario;
-				}
+				
 				
 				@media screen and (min-width: $break-small){
 					font-size: 22px;
@@ -220,9 +172,10 @@ img:not([alt]) {
 .banner{
 	height: 200px;
 	background: $gris1 url(../images/ilustracionsm.png) repeat-x;
-	background-position-y: center;
-	background-position-x: center;
+	background-attachment: fixed;
+	background-position: center 90px;
 	position: relative;
+	z-index: -1;
 	
 	display: -webkit-flex;
 	display: flex;
@@ -236,11 +189,13 @@ img:not([alt]) {
 	@media screen and (min-width: $break-medium) {
 		height: 360px;
 		background: $gris1 url(../images/ilustracion.png) repeat-x;
-		-webkit-animation: paneo 60s infinite; /* Safari 4+ */
-		-moz-animation:    paneo 60s infinite; /* Fx 5+ */
-		-o-animation:      paneo 60s infinite; /* Opera 12+ */
-		animation:         paneo 60s infinite; /* IE 10+, Fx 29+ */
+		-webkit-animation: paneo 120s infinite; /* Safari 4+ */
+		-moz-animation:    paneo 120s infinite; /* Fx 5+ */
+		-o-animation:      paneo 120s infinite; /* Opera 12+ */
+		animation:         paneo 120s infinite; /* IE 10+, Fx 29+ */
 		animation-timing-function: linear;
+		background-attachment: fixed;
+		background-position: center 80px;
 	}
 	
 	.logo-big{
@@ -270,20 +225,50 @@ img:not([alt]) {
 	}
 }
 
-/*-------------------------------Aqui termina el banner-----------------------*/
+/*--------------Aqui termina el banner-----------*/
 
-/*-------------------------------Aqui empieza el contenido principal___-----------------------*/
+/*---------Aqui empieza el contenido principal-------------*/
 .main{
-	padding: 4em 1em;
+	padding-top: 4em;
+	padding-bottom: 4em;
 	
 	@media screen and (min-width: $break-small){
 		padding: 4em 0;
 	}
 	
+	.page-header {
+		margin: 0 0 2em;
+		border-bottom: 2px solid $color-terciario;
+	}
+	
+	.chapter{
+		text-transform: uppercase;
+		font: .6em;
+		color: $color-texto2;
+	}
+	.center-block{
+		@media screen and (min-width: $break-medium) {
+			margin-bottom: 4em;
+		}
+	}
 	blockquote{
-		font-size: 1.2em;
-		font-weight: lighter;
-		margin: 0 0 2em 1em!important;
+		font-size: 110%;
+		font-weight: 300;
+		position: relative;
+		&::before {
+			content: "“";
+			position: absolute;
+			font-size: 120px;
+			top: -50px;
+			left: -50px;
+			color: $gris1;
+			z-index: -1;
+			opacity: 0.5;
+		}
+	}
+	ul,ol {
+		padding-left: 2em;
+		list-style-position: outside;
 	}
 	ol.letter-list {
 		list-style: lower-alpha;
@@ -294,39 +279,233 @@ img:not([alt]) {
 		display: block;
 		text-align: center;
 	}
-	.img-responsive {
-		max-width: 100%;
-		height: auto;
+	//estilos de imagenes
+	figure {
+		margin: 1em 0 2em;
+		background: $color-terciario;
+		@include border(5px);
+		
+		@media screen and (min-width:$break-medium) {
+			margin: 1em 0 4em;
+		}	
+		
+		&.img-responsive {
+			img {
+				max-width: 100%;
+				height: auto;
+			}	
+		}
+		
+		
+		a[data-lightbox] {
+			position: relative;
+			
+			&::after {
+				content: "";
+				background: $color-terciario url(../images/zoom.png) no-repeat center center;
+				width: 33px;
+				height: 33px;
+				@include border(50% 0 0 0 );
+				padding: 5px;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				
+			}
+		}
+	}
+	figcaption, .caption {
+		font-size: .85em;
+		line-height: 1.38;
+		color: $color-texto2;
+		padding: 1em;
 		
 	}
-	b {
-		color: $color-texto3;
-	}
-	.caption {
-		font-size: .8em;
+	
+	strong {
 		color: $color-texto2;
+	}
+	.destacado {
+		background: white;
+		padding: 1.5em 1em;
+		@include border(6px);
+		border-left: 16px solid $color-terciario;
+		font-size: 90%;
+		line-height: 1.7;
+		margin-bottom: 2em;
+	}
+	
+	.capsule {
+		display: block;
+		background: $gris1;
+		@include border(5px);
+		padding: 0;
+		display: flex;
+		align-items: stretch;
+		margin: 2em 0 2.5em;
+		border: 1px solid $color-terciario;
+		overflow: hidden;
+		
+		.capsule-title {
+			width: 120px;
+			//@include border(5px 0 0 5px);
+			flex-shrink: 0;
+			background: $color-terciario;
+			padding: 10px;
+			text-align: center;
+			
+
+			span {
+				background: url(../images/sabia-que.svg) no-repeat top center;
+				height: auto;
+				weight: 100px;
+				display: block;
+				padding-top: 90px;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				color: $color-secundario;
+				flex-shrink: 0;
+				font-size: 0.9em;
+				line-height: 1.2;
+			}
+		}
+		
+		&.recuerde .capsule-title span {
+			background: url(../images/recuerde.svg) no-repeat top center;
+		}
+		
+		&.download .capsule-title span {
+			background: url(../images/download.svg) no-repeat top center;
+		}
+		
+		&.enlace .capsule-title span {
+			background: url(../images/enlace.svg) no-repeat top center;
+		}
+		
+		.capsule-content {
+			font-size: .9em;
+			line-height: 1.57;
+			padding: 1em;
+			
+			
+			@media screen and (minwidth:$break-medium) {
+				font-size: 1em;
+				line-height: inherit;
+			}
+		}
 	}
 }
 
+.lightbox {
+	a,
+	button {
+		border: none;
+	}
+}
+
+
+//Glosario
+
+dl {
+	dt {
+		font-weight: 600;
+		color: $color-texto2;
+		margin-bottom: 1em;
+	}
+	dd {
+		margin: 0 0 2em 0;
+		padding: 0 0 1em 2em;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gris1;
+		}
+		
+	}
+}
+
+//creditos
+.creditos {
+	.logos {
+		display: flex;
+		align-items: center;
+		align-content: space-around;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin: 2em 0;
+		img {
+			width: 20%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+	h4, p, ul {
+		margin-bottom: .5em;
+		
+	}
+	ul li {
+		list-style: none;
+	}
+	
+	
+}
+
+.sutil {
+	font-size: .9em;
+	color: $color-texto3;
+}
+
+//referencias
+.ref-list {
+	word-wrap: break-word;
+	list-style: none;
+	padding: 0;
+	
+	li {
+		text-indent: -2em;
+		margin-bottom: 2em;
+	}
+}
+
+
+
+/*-----------------------------------------------
+** Barra lateral
+-------------------------------------------------*/
+.sidebar {
+	h4 {
+		font-size: 1em;
+	}
+	
+}
+
+
+/*-----------------------------------------------
+** Pagina principal
+-------------------------------------------------*/
+
 .front-page{
+	max-width: 960px;
+	
 	.flex-container {
-	  padding: 0;
-	  margin: 0;
-	  list-style: none;
-	  
-	  display: -webkit-box;
-	  display: -moz-box;
-	  display: -ms-flexbox;
-	  display: -webkit-flex;
-	  display: flex;
-	  
-	  -webkit-flex-flow: row wrap;
-	  justify-content: space-around;
-	  
-	  .flex-item {
-		margin: .5em 0;
-		position: relative;
-		text-align: center;
+		
+		
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+		
+		.flex-item {
+			margin: .5em 0;
+			position: relative;
+			text-align: center;
 		  
 		  		  
 		  a{
@@ -422,70 +601,398 @@ img:not([alt]) {
 		  
 		}
 	}
+}
 	
 /*----------------------------------  ACCORDION ---------------------------------------------------*/
-	.accordion {
-	  background: $gris1;
-	  margin: 2em 0;
+.accordion {
+  background: $gris1;
+  margin: 2em 0;
+  padding-left: 0!important;
+  overflow: auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid $color-terciario;
+  
+  
+  
+  ul {
+	  margin: 0;
 	  padding: 0;
-	  overflow: auto;
-	  -webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
+		li {
+			padding: 0;
+			list-style-type: none;
+			margin: 0!important;
+		}
+
+  }
+  
+  &.actividad{
+	  margin: 0 -1em 1em;
+	  
+	  .panel-title {
+		  
+		  background: $color-terciario;
+		  
+		  h3 {
+			  background: url(../images/actividad.svg) no-repeat left center;
+			  margin: 0 0 0 40px;
+			  height: 100px;
+			  padding: 50px 0 0 100px;
+		  }
+	  }
+	  @media screen and (min-width:$break-small) {
+		  margin: 0 0 1em;
+	  }
+  }
+  
+  
+}
+
+.panel-title{
+	text-align: left;
+	display: block;
+	background: $gris1;
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+	
+	&:before {
+		content: "";
+		height: 25px;
+		width: 25px;
+		margin-right: .2em;
+		margin-bottom: -2px;			
+		display: inline-block;
+		position: absolute;
+		top: calc(50% - 12.5px);
+		left: 5px;
+		background: url(../images/plus.svg) no-repeat left top;
+		
 	}
 	
-	.accordion li {
-	  padding: 0;
-	  list-style-type: none;
-	  margin: 0!important;
-	 }
-
-	.panel-title{
-		text-align: left;
-		display: block;
-		background: $gris1;
-		width: 100%;
-		cursor: pointer;
+	h3{
+		padding: .2em .4em;
+		margin: 0 0 0 30px;
 		
-		h3{
-			padding: .2em .4em;
-			margin: 0;
+		
+	}
+	
+}
+
+
+.accordion-panel {
+	//display: none; //comment this line to show and test
+	padding: 2em 1em;
+	.panel-content {
+	  max-width: 680px;
+	  margin: 0 auto;
+	}
+}
+
+
+
+.accordion-panel img {
+  display: block;
+  clear: left;
+ }
+		
+	
+
+
+	
+
+/*-----------  Aqui termina el ACCORDION ---*/
+
+
+
+
+/*-------------------------------------
+** Quiz
+----------------------------------------*/
+
+.quiz-container {
+	position: relative;
+	//height: 220px;
+	margin-top: 40px;
+	
+	
+	.question {
+		display: block;
+		text-align: center;
+	}
+	.accident {
+		display: block;
+	}
+	
+	.answers {
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		align-content: space-between;
+		justify-content: center;
+		
+		
+		label {
+			margin: 0 1em;
+			cursor: pointer;
+			-webkit-transition: all 0.25s linear;
+			border: 1px solid $color-terciario;
+			background: #eee;
+			padding: .5em 1em;
+			@include border(5px);
+			font-weight: 400;
+		}
+		input[type=radio] {
+		  border: 5px solid #0DFF92;
+		  margin: 0;
+		}
+		input[type=radio]:checked {
+		  border: 8px solid #0DFF92;
+		  margin: 0;
+		}
+		input[type=radio]:checked::before{
+		  background: #0DFF92;
+		  margin: 0;
+		}
+	}
+	
+	
+}
+.qwrap {
+	@include border(.5em);
+	border: 1px solid $color-terciario;
+	background: white;
+	padding: 1em;
+	margin-bottom: .5em;
+	line-height: 1.45;
+	.question {
+		margin-bottom: 1em;
+	}
+	.solution {
+		display: none;
+		padding: .5em;
+		background: $color_secundario;
+		color: white;
+	}
+	label {
+		font-weight: 400;
+	}
+	
+}
+.tics {
+	.quiz-container {
+		//height: 520px;
+	}
+	.question {
+		font-size: 150%;
+	}
+	.answers {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-around;
+		
+		label {
+			margin: 10px;
+			width: 200px;
+			height: 100px;
+			font-size: 0;
+			text-indent: -2000px;
+			overflow: hidden;
+			position: relative;
 			
-			&:before{
-			content: "";
-			height: 25px;
-			width: 25px;
-			margin-right: .2em;
-			margin-bottom: -2px;			
-			display: inline-block;
-			background: url(../images/plus.svg) no-repeat center bottom;
+			input {
+				position: absolute;
+				left: 5px;
+				top: calc(50% - 10px);
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+			}
 			
+			&.Prezi {
+				background: url(../images/logo-prezi.png) no-repeat center center;
+				background-size: 60%;				
+			}
+			&.Gmail {
+				background: url(../images/logo-gmail.png) no-repeat center center;
+				background-size: 60%;
+			}
+			&.Lync {
+				background: url(../images/logo-lync.png) no-repeat center center;
+				background-size: 60%;
+			}
+			&.Dropbox {
+				background: url(../images/logo-dropbox.png) no-repeat center center;
+				background-size: 70%;
+			}
+			&.Wunderlist {
+				background: url(../images/logo-wunderlist.png) no-repeat center center;
+				background-size: 70%;
 			}
 		}
+			
+	}
+	.puntos {
+		font-size: 150%;
+		color: $color-principal;
+	}
+}
+
+.slide{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 100%;
+	//height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.5s;
+	background: inherit;
+	padding: 1em;
+	margin: 0 -1em 2em;
+	clear: both;
+	
+
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-nav {
+	width: 100%;
+	@include flexbox;
+	justify-content: center;
+	align-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 1em 0;
+
+	button {
+		background: $color-secundario;
+		color: $color-terciario;
+		margin: .5em 2px;
+		z-index: 50;
+	}
+	#submit, #submit2 {
+		background-color: $color-principal;
+		border-color: $color-secundario;
+		color: $color-secundario;
+		margin-left: auto;
+	}
+	#next {
+		margin-left: auto;
+	}
+	#previous {
 		
 	}
-
-	
-	.accordion-panel {
-		display: none;
-		padding: 1em 2em;
-		.panel-content {
-		  max-width: 600px;
-		  margin: 0 auto;
-		}
-	}
-	
-
-	
-	.accordion-panel img {
-	  display: block;
-	  clear: left;
-	 }
-		
 
 	
 }
-/*----------------------------------  Aqui termina el ACCORDION ---------------------------------------------------*/
+
+.accidents #results {
+
+	text-align: center;
+	font-size: 150%;
+	color: $color-principal;
+
+
+}
+
+#reset {
+	display: none;
+	margin: 2em auto 0;
+	
+}
+
+
+
+/*-------------------------------------
+** Caso
+----------------------------------------*/
+
+.caso {
+	background: white;
+	@include border(.5em);
+	padding: 1em;
+	border: 1px solid $color-terciario;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+	
+	line-height: 1.55;
+	@media screen and (min-width:$break-medium) {
+		padding: 1em 1.75em;
+		font-size: 110%;
+	}
+}
+
+.buttons {
+	margin: 2em 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+	button {
+		margin: .5em;	
+	}
+	#respuesta {
+		background: $color_secundario;
+		color: white;
+	}
+	#recomendacion {
+		background: $color-principal;
+		color: white;
+	}
+}
+
+//Modal
+.modal {
+	position: absolute;
+	z-index: 1000;
+	background-color: white;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: rgba(50,60,100,.85);
+	padding: 2em 0;
+}
+
+
+#respuesta-window, #recomendacion-window {
+	line-height: 1.5;
+	width: auto;
+	padding: 1em;
+	background: $gris1;
+	width: 90%;
+	max-width: 100%;
+	margin: 100px auto 0;
+	@include border(.5em);
+	border: 1px solid $color_secundario;
+	
+	@media screen and (min-width: $break-small) {
+		padding: 2em;
+		max-width: 500px;
+	}
+	
+	ol{
+		padding-left: 2em;
+		list-style-position: outside;
+	}
+}
+
+.modal-close {
+	cursor: pointer;
+}
+
+button.modal-close {
+ 	position: absolute;
+ 	right: 20px;
+ 	top: 20px;
+ 	background: white;
+ }
+
+
 
 
 
@@ -510,13 +1017,8 @@ img:not([alt]) {
 		padding: 0;
 		
 		li{
-			margin: 0;
+			margin: 0 0 .5em 0;	
 			
-			a{
-				text-decoration: none;
-				color: $color-secundario;
-				
-			}
 		}
 	
 	}
