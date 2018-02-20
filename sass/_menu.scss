@@ -44,7 +44,7 @@
 					display: block;	
 					padding: 1em;			
 					border-bottom: 1px solid $gris2;
-				
+					
 				}
 			}
 			
@@ -63,7 +63,10 @@
 		height: 50px;
 		width: 100%;
 		display: block;
-		background: $color-principal url(../images/logo-lg.png) no-repeat center 2em;
+		background-color: $color-principal;
+		@include vector-bg-with-fallback(logo-lg);
+		background-repeat: no-repeat;
+		background-position: center 2em;
 		padding: 130px 0 1em;
 		border-bottom: 2px solid $color-secundario;
 		margin: 0 0 51px 0;
@@ -73,7 +76,10 @@
 			content: "";
 			height: 51px;
 			width: 100%;
-			background: url(../images/cinta.svg) no-repeat 2em top;
+// 			background: url(../images/cinta.svg) no-repeat 2em top;
+			@include vector-bg-with-fallback(cinta);
+			background-repeat: no-repeat;
+			background-position: 2em top;
 			display: block;
 			margin-top: 51px;
 		}
@@ -132,6 +138,14 @@
 					}
 				}
 			}
+		}
+	}
+	
+	a {
+		&.active,
+		&:hover{
+			background: $color-secundario!important;
+			color: $color-principal!important;
 		}
 	}
 }

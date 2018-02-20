@@ -70,3 +70,11 @@ $break-xsmall: 400px;
 	}
 	flex-wrap: $value;
 }
+
+//Svg png fallback
+$public_path: "../";
+
+@mixin vector-bg-with-fallback($name) {
+  background-image: url('#{$public_path}images/#{$name}.png');
+  background-image: none, url('#{$public_path}images/#{$name}.svg');
+}

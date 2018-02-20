@@ -626,7 +626,11 @@ img:not([alt]) {
   height: 50px;
   width: 100%;
   display: block;
-  background: #1ccfc9 url(../images/logo-lg.png) no-repeat center 2em;
+  background-color: #1ccfc9;
+  background-image: url("../images/logo-lg.png");
+  background-image: none, url("../images/logo-lg.svg");
+  background-repeat: no-repeat;
+  background-position: center 2em;
   padding: 130px 0 1em;
   border-bottom: 2px solid #323c64;
   margin: 0 0 51px 0;
@@ -635,7 +639,10 @@ img:not([alt]) {
     content: "";
     height: 51px;
     width: 100%;
-    background: url(../images/cinta.svg) no-repeat 2em top;
+    background-image: url("../images/cinta.png");
+    background-image: none, url("../images/cinta.svg");
+    background-repeat: no-repeat;
+    background-position: 2em top;
     display: block;
     margin-top: 51px; }
   @media screen and (min-width: 750px) {
@@ -682,6 +689,9 @@ img:not([alt]) {
           .nav-menu ul.main-menu li a:hover {
             background: #323c64;
             color: #1ccfc9; } }
+.nav-menu a.active, .nav-menu a:hover {
+  background: #323c64 !important;
+  color: #1ccfc9 !important; }
 
 .toggle-button {
   height: 32px;
@@ -801,7 +811,9 @@ img:not([alt]) {
     .top-bar .site-header::after {
       content: "";
       display: inline-block;
-      background: url(../images/cinta.png);
+      background-image: url("../images/cinta.png");
+      background-image: none, url("../images/cinta.svg");
+      background-repeat: no-repeat;
       width: 44px;
       height: 51px;
       left: 6%;
@@ -822,14 +834,18 @@ img:not([alt]) {
         border: 0;
         color: #323c64; }
       .top-bar .site-header .branding .logo {
-        background: url(../images/logo-sm.svg) no-repeat left top;
+        background-image: url("../images/logo-sm.png");
+        background-image: none, url("../images/logo-sm.svg");
+        background-repeat: no-repeat;
+        background-position: left top;
         width: 66px;
         height: 63px;
         margin-right: .25em;
         flex-shrink: 0; }
         @media screen and (min-width: 750px) {
           .top-bar .site-header .branding .logo {
-            background: url(../images/logo-lg.svg) no-repeat left top;
+            background-image: url("../images/logo-lg.png");
+            background-image: none, url("../images/logo-lg.svg");
             width: 72px;
             height: 68px; } }
       .top-bar .site-header .branding .title {
@@ -889,11 +905,14 @@ img:not([alt]) {
     line-height: 1;
     height: 40px;
     width: 40px;
-    background: red;
     position: absolute;
     right: calc(50% - 20px);
     top: calc(100% - 20px);
-    background: #d6d6d6 url(../images/down.svg) no-repeat center center;
+    background-image: url("../images/down.png");
+    background-image: none, url("../images/down.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #d6d6d6;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%; }
@@ -932,7 +951,6 @@ img:not([alt]) {
       font-size: 120px;
       top: -50px;
       left: -50px;
-      color: #f2f2f2;
       z-index: -1;
       opacity: 0.5; }
   .main ul, .main ol {
@@ -982,7 +1000,7 @@ img:not([alt]) {
         right: 0; }
   .main figcaption, .main .caption {
     font-size: .85em;
-    line-height: 1.38;
+    line-height: 1.45;
     color: #5b6383;
     padding: 1em; }
   .main strong {
@@ -1018,29 +1036,50 @@ img:not([alt]) {
     border: 1px solid #b5b9c7;
     overflow: hidden; }
     .main .capsule .capsule-title {
-      width: 120px;
+      width: 80px;
       flex-shrink: 0;
       background: #b5b9c7;
-      padding: 10px;
+      padding: 5px;
       text-align: center; }
+      @media screen and (min-width: 750px) {
+        .main .capsule .capsule-title {
+          width: 120px;
+          padding: 10px; } }
       .main .capsule .capsule-title span {
-        background: url(../images/sabia-que.svg) no-repeat top center;
+        background-image: url("../images/sabia-que.png");
+        background-image: none, url("../images/sabia-que.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        width: 60px;
         height: auto;
-        weight: 100px;
         display: block;
-        padding-top: 90px;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        padding-top: 65px;
+        margin: 1em auto 0;
         color: #323c64;
         flex-shrink: 0;
-        font-size: 0.9em;
+        font-size: 0.65em;
         line-height: 1.2; }
+        @media screen and (min-width: 750px) {
+          .main .capsule .capsule-title span {
+            background-size: contain;
+            width: 100px;
+            height: auto;
+            margin: 1em auto 0;
+            padding-top: 110px;
+            font-size: 0.9em; } }
     .main .capsule.recuerde .capsule-title span {
-      background: url(../images/recuerde.svg) no-repeat top center; }
+      background-image: url("../images/recuerde.png");
+      background-image: none, url("../images/recuerde.svg");
+      background-size: contain; }
     .main .capsule.download .capsule-title span {
-      background: url(../images/download.svg) no-repeat top center; }
+      background-image: url("../images/download.png");
+      background-image: none, url("../images/download.svg");
+      background-size: contain; }
     .main .capsule.enlace .capsule-title span {
-      background: url(../images/enlace.svg) no-repeat top center; }
+      background-image: url("../images/enlace.png");
+      background-image: none, url("../images/enlace.svg");
+      background-size: contain; }
     .main .capsule .capsule-content {
       font-size: .9em;
       line-height: 1.57;
@@ -1146,7 +1185,9 @@ dl dd {
           transform: scale(1.05, 1.05);
           z-index: 30; }
         .front-page .flex-container .flex-item a:hover:after {
-          background: #1ccfc9 url(../images/flecha-invertida.svg) no-repeat center 5px; }
+          background-image: url("../images/flecha-invertida.png");
+          background-image: none, url("../images/flecha-invertida.svg");
+          background-color: #1ccfc9; }
         .front-page .flex-container .flex-item a:after {
           content: "";
           height: 50px;
@@ -1162,7 +1203,11 @@ dl dd {
           -webkit-background-clip: padding-box;
           -moz-background-clip: padding;
           background-clip: padding-box;
-          background: #323c64 url(../images/flecha.svg) no-repeat center 5px;
+          background-image: url("../images/flecha.png");
+          background-image: none, url("../images/flecha.svg");
+          background-color: #323c64;
+          background-repeat: no-repeat;
+          background-position: center 5px;
           overflow: visible; }
       .front-page .flex-container .flex-item span.icon {
         width: 150px;
@@ -1174,43 +1219,57 @@ dl dd {
         background-size: cover;
         overflow: hidden; }
       .front-page .flex-container .flex-item:nth-child(1) span {
-        background: url(../images/cap1.svg); }
+        background-image: url("../images/cap1.png");
+        background-image: none, url("../images/cap1.svg"); }
       .front-page .flex-container .flex-item:nth-child(2) span {
-        background: url(../images/cap2.svg); }
+        background-image: url("../images/cap2.png");
+        background-image: none, url("../images/cap2.svg"); }
       .front-page .flex-container .flex-item:nth-child(3) span {
-        background: url(../images/cap3.svg); }
+        background-image: url("../images/cap3.png");
+        background-image: none, url("../images/cap3.svg"); }
       .front-page .flex-container .flex-item:nth-child(4) span {
-        background: url(../images/cap4.svg); }
-      .front-page .flex-container .flex-item:nth-child(4) span {
-        background: url(../images/cap4.svg); }
+        background-image: url("../images/cap4.png");
+        background-image: none, url("../images/cap4.svg"); }
       .front-page .flex-container .flex-item:nth-child(5) span {
-        background: url(../images/cap5.svg); }
+        background-image: url("../images/cap5.png");
+        background-image: none, url("../images/cap5.svg"); }
       .front-page .flex-container .flex-item:nth-child(6) span {
-        background: url(../images/cap6.svg); }
+        background-image: url("../images/cap6.png");
+        background-image: none, url("../images/cap6.svg"); }
 
 /*----------------------------------  ACCORDION ---------------------------------------------------*/
 .accordion {
   background: #f2f2f2;
   margin: 2em 0;
-  padding-left: 0 !important;
+  padding-left: 0;
   overflow: auto;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #b5b9c7; }
+  border: 1px solid #b5b9c7;
+  list-style: none; }
   .accordion ul {
     margin: 0;
     padding: 0; }
-    .accordion ul li {
-      padding: 0;
-      list-style-type: none;
-      margin: 0 !important; }
+  .accordion li {
+    padding: 0;
+    list-style-type: none;
+    margin: 0; }
+  .accordion.intro {
+    padding-left: 1em;
+    margin: 2em -2em; }
+    @media screen and (min-width: 550px) {
+      .accordion.intro {
+        margin: 2em 0; } }
   .accordion.actividad {
     margin: 0 -1em 1em; }
     .accordion.actividad .panel-title {
       background: #b5b9c7; }
       .accordion.actividad .panel-title h3 {
-        background: url(../images/actividad.svg) no-repeat left center;
+        background-image: url("../images/actividad.png");
+        background-image: none, url("../images/actividad.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
         margin: 0 0 0 40px;
         height: 100px;
         padding: 50px 0 0 100px; }
@@ -1235,7 +1294,10 @@ dl dd {
     position: absolute;
     top: calc(50% - 12.5px);
     left: 5px;
-    background: url(../images/plus.svg) no-repeat left top; }
+    background-image: url("../images/plus.png");
+    background-image: none, url("../images/plus.svg");
+    background-repeat: no-repeat;
+    background-position: left top; }
   .panel-title h3 {
     padding: .2em .4em;
     margin: 0 0 0 30px; }
@@ -1317,6 +1379,8 @@ dl dd {
   .qwrap label {
     font-weight: 400; }
 
+.tics .quiz-container {
+  min-height: 200px; }
 .tics .question {
   font-size: 150%; }
 .tics .answers {
@@ -1325,20 +1389,30 @@ dl dd {
   flex-wrap: wrap;
   align-content: space-around; }
   .tics .answers label {
-    margin: 10px;
-    width: 200px;
-    height: 100px;
+    margin: 5px;
+    width: 140px;
+    height: 70px;
     font-size: 0;
     text-indent: -2000px;
     overflow: hidden;
     position: relative; }
+    @media screen and (min-width: 750px) {
+      .tics .answers label {
+        margin: 10px;
+        width: 200px;
+        height: 100px; } }
     .tics .answers label input {
       position: absolute;
       left: 5px;
-      top: calc(50% - 10px);
-      width: 20px;
-      height: 20px;
+      top: calc(50% - 7px);
+      width: 14px;
+      height: 14px;
       margin-right: 10px; }
+      @media screen and (min-width: 750px) {
+        .tics .answers label input {
+          top: calc(50% - 10px);
+          width: 20px;
+          height: 20px; } }
     .tics .answers label.Prezi {
       background: url(../images/logo-prezi.png) no-repeat center center;
       background-size: 60%; }

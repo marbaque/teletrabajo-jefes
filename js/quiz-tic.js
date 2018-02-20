@@ -132,11 +132,11 @@
 				numCorrect++;
 				
 				// color the answers green
-				//answerContainers[questionNumber].style.borderColor = "#1ccfc9";
+				answerContainers[questionNumber].style.borderColor = "#1ccfc9";
 			} else {
 				// if answer is wrong or blank
 				// color the answers red
-				//answerContainers[questionNumber].style.borderColor = "tomato";
+				answerContainers[questionNumber].style.borderColor = "tomato";
 			}
 	    });
 
@@ -147,7 +147,7 @@
 
 	<p>Gmail le permite sincronizar sus cuentas de correo electrónico institucionales con las comerciales.</p>
 	
-	<p>Link es una herramienta que se sincroniza con Outlook y le permite realizar conferencias de audio, video y reuniones en línea con uso compartido del escritorio.</p>
+	<p>Lynk es una herramienta que se sincroniza con Outlook y le permite realizar conferencias de audio, video y reuniones en línea con uso compartido del escritorio.</p>
 	
 	<p>Dropbox le da la posibilidad de almacenar y compartir contenidos a través de la sincronización de computadoras y/o dispositivos móviles.</p>
 	
@@ -234,7 +234,7 @@
 
 	//resize quiz height
 	$(window).resize(function() {
-	    $('.quiz-container').height($('.slide').height() + 100);
+	    $('.quiz-container').height($('.slide').height() + 80);
 	});
 	
 	$(window).trigger('resize');
