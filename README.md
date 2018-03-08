@@ -8,7 +8,7 @@ referencias bibliográficas respectivas. Además, está disponible para descarga
 
 Esperamos que este material sea de utilidad en sus procesos de conocimiento y gestión acerca del teletrajo para jefes.
 
-Nota: El documento se refiere a teletrabajador, refiriéndose tanto al género masculino como femenino.
+Nota: El material se refiere a teletrabajador, refiriéndose tanto al género masculino como femenino.
 
 ## Créditos
 * Libro multimedia Guía de teletrabajo para jefes, versión: 1.0.
