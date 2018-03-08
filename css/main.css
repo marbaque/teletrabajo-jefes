@@ -565,6 +565,15 @@ a {
     color: #848aa2;
     border-color: #848aa2; }
 
+::-moz-selection {
+  /* Code for Firefox */
+  background: #1ccfc9;
+  color: #323c64; }
+
+::selection {
+  background: #1ccfc9;
+  color: #323c64; }
+
 img:not([alt]) {
   border: 5px dashed tomato; }
 
@@ -858,6 +867,8 @@ img:not([alt]) {
         display: inline-block;
         background-size: 50px;
         letter-spacing: 0.2px; }
+        .top-bar .site-header .branding .title a:visited, .top-bar .site-header .branding .title a:hover, .top-bar .site-header .branding .title a:active {
+          color: #323c64; }
         @media screen and (min-width: 550px) {
           .top-bar .site-header .branding .title {
             font-size: 22px; } }
@@ -1002,7 +1013,17 @@ img:not([alt]) {
     font-size: .85em;
     line-height: 1.45;
     color: #5b6383;
-    padding: 1em; }
+    padding: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .main figcaption a, .main .caption a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      display: block;
+      color: #323c64;
+      border-color: #323c64; }
   .main strong {
     color: #5b6383; }
   .main .destacado {
@@ -1597,6 +1618,10 @@ button.modal-close {
           margin: 0 0 .25em 0; }
           .footer-menu ul li:not(:last-child):after {
             content: "|";
-            margin: 0 0.25em; } }
+            margin: 0 0.25em; }
+      .footer-menu a,
+      .footer-menu a:visited {
+        color: #323c64;
+        border-color: #323c64; } }
 
 /*# sourceMappingURL=main.css.map */
