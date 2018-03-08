@@ -8,10 +8,10 @@ referencias bibliográficas respectivas. Además, está disponible para descarga
 
 Esperamos que este material sea de utilidad en sus procesos de conocimiento y gestión acerca del teletrajo para jefes.
 
-Nota: El material se refiere a teletrabajador, refiriéndose tanto al género masculino como femenino.
+Nota: esta Guía emplea el término teletrabajador, refiriéndose tanto al género masculino como femenino.
 
 ## Créditos
-* Libro multimedia Guía de teletrabajo para jefes, versión: 1.0.
+* Guía de teletrabajo para jefes, versión: 1.0.
 * Publicación: febrero, 2018.
 * Producción de la Universidad Estatal a Distancia (UNED) de Costa Rica.
 * Fundación de la Universidad Estatal a Distancia para el Desarrollo y Promoción de la Educación a Distancia (Fundepredi).
