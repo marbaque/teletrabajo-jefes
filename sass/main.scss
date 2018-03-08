@@ -350,11 +350,7 @@ img:not([alt]) {
 		text-overflow: ellipsis;
 		
 		a {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			width: 100%;
-			display: block;
+			word-break: break-all;
 			color: $color-secundario;
 			border-color: $color-secundario;
 		}

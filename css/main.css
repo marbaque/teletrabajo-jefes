@@ -1017,11 +1017,7 @@ img:not([alt]) {
     overflow: hidden;
     text-overflow: ellipsis; }
     .main figcaption a, .main .caption a {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 100%;
-      display: block;
+      word-break: break-all;
       color: #323c64;
       border-color: #323c64; }
   .main strong {
