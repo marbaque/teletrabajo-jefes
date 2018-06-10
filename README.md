@@ -12,7 +12,7 @@ Nota: esta Guía emplea el término teletrabajador, refiriéndose tanto al géne
 
 ## Créditos
 * Guía de teletrabajo para jefes, versión: 1.0.
-* Publicación: febrero, 2018.
+* Publicación: junio, 2018.
 * Producción de la Universidad Estatal a Distancia (UNED) de Costa Rica.
 * Fundación de la Universidad Estatal a Distancia para el Desarrollo y Promoción de la Educación a Distancia (Fundepredi).
 * Vicerrectoría de Planificación.
