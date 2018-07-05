@@ -1,4 +1,4 @@
-# Teletrabajo para jefes
+# Libro multimedia Guía de teletrabajo para jefes
 La Guía de teletrabajo para jefes ha sido elaborada para todas aquellas personas involucradas en la
 administración de talento humano e interesadas en conocer sobre el tema para así administrar, en un futuro,
 a funcionarios teletrabajadores.
@@ -11,16 +11,25 @@ Esperamos que este material sea de utilidad en sus procesos de conocimiento y ge
 Nota: esta Guía emplea el término teletrabajador, refiriéndose tanto al género masculino como femenino.
 
 ## Créditos
-* Guía de teletrabajo para jefes, versión: 1.0.
-* Publicación: junio, 2018.
-* Producción de la Universidad Estatal a Distancia (UNED) de Costa Rica.
-* Fundación de la Universidad Estatal a Distancia para el Desarrollo y Promoción de la Educación a Distancia (Fundepredi).
+* Universidad Estatal a Distancia (UNED) de Costa Rica.
+* Fundación de la Universidad Estatal a Distancia para el Desarrollo y Promoción de la Educación a Distancia (FUNDEPREDI).
 * Vicerrectoría de Planificación.
 * Programa de teletrabajo.
 * Productor: Juan Diego Delgado Vargas.
-* Adaptación de contenido: Adriana Oviedo Vega y Alejandra Arce Romero.
-* Supervisión: Edgar Castro, Vicerrector de Planificación, UNED, Costa Rica.
+* Adaptación de contenido: Adriana Oviedo Vega y Alejandra Arce Romero, Programa de teletrabajo de la UNED de Costa Rica.
+* Supervisión: Edgar Castro, Vicerrector de Planificación de la UNED de Costa Rica.
 * Revisión filológica: Mauren González Jones.
 * Diseño gráfico e ilustraciones: Juan Diego Delgado Vargas.
-* Fotografías: ©Depositphotos.Inc, Licencia Estándar.
+* Fotografías: ©Depositphotos.Inc, adquiridas bajo Licencia Estándar.
 * Desarrollo y programación web: Mario Badilla Quesada.
+Comentarios o consultas:
+Programa de teletrabajo de la UNED de Costa Rica.
+Adriana Oviedo Vega,
+aoviedo@uned.ac.cr
+Alejandra Arce Romero,
+aarcer@uned.ac.cr.
+Sede central de la UNED de Costa Rica, Edificio Ii+D, segundo piso, ala oeste.
+Teléfono: 2234-3236 ext. 3525.
+Versión: 1.0.
+Publicación: julio, 2018.
+Última actualización: julio, 2018.
