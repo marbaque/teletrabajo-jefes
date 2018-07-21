@@ -774,6 +774,7 @@ dl {
 	&.actividad {
 		.accordion-panel {
 			display: block;
+			background-color: #fff;
 		}
 	}
 }
@@ -789,17 +790,20 @@ dl {
 
 /////////////////////////////////////////////////////h5p
 .h5p-container {
-	height: auto;
-	min-width: 400px;
-	
-	.h5p-iframe-wrapper, body {
-		background: #fff;
-		
-	}
+	@extend .caso;
 }
 .h5p-actions {
 	display: none;
 }
+
+.h5p-link {
+	display: none!important;
+}
+
+.h5peditor .ui-dialog .h5p-joubelui-button, .h5peditor .h5p-joubelui-button, .h5p-joubelui-button {
+		background: $color_secundario!important;
+	}
+
 
 /*-------------------------------------
 ** Quiz
