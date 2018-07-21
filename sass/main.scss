@@ -763,9 +763,18 @@ dl {
 .accordion-panel {
 	display: none; //comment this line to show and test
 	padding: 2em 1em;
+	
 	.panel-content {
 	  max-width: 680px;
 	  margin: 0 auto;
+	}
+	
+}
+.accordion {
+	&.actividad {
+		.accordion-panel {
+			display: block;
+		}
 	}
 }
 
@@ -775,16 +784,22 @@ dl {
   display: block;
   clear: left;
  }
-		
-	
-
-
-	
-
 /*-----------  Aqui termina el ACCORDION ---*/
 
 
-
+/////////////////////////////////////////////////////h5p
+.h5p-container {
+	height: auto;
+	min-width: 400px;
+	
+	.h5p-iframe-wrapper, body {
+		background: #fff;
+		
+	}
+}
+.h5p-actions {
+	display: none;
+}
 
 /*-------------------------------------
 ** Quiz
@@ -1150,3 +1165,4 @@ button.modal-close {
 	}
 	
 }
+

@@ -1326,11 +1326,23 @@ dl dd {
     max-width: 680px;
     margin: 0 auto; }
 
+.accordion.actividad .accordion-panel {
+  display: block; }
+
 .accordion-panel img {
   display: block;
   clear: left; }
 
 /*-----------  Aqui termina el ACCORDION ---*/
+.h5p-container {
+  height: auto;
+  min-width: 400px; }
+  .h5p-container .h5p-iframe-wrapper, .h5p-container body {
+    background: #fff; }
+
+.h5p-actions {
+  display: none; }
+
 /*-------------------------------------
 ** Quiz
 ----------------------------------------*/
