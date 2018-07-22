@@ -1327,22 +1327,17 @@ dl dd {
     margin: 0 auto; }
 
 .accordion.actividad .accordion-panel {
-  display: block;
-  background-color: #fff; }
+  display: block; }
 
 .accordion-panel img {
   display: block;
   clear: left; }
 
 /*-----------  Aqui termina el ACCORDION ---*/
-.h5p-actions {
-  display: none; }
-
-.h5p-link {
-  display: none !important; }
-
-.h5peditor .ui-dialog .h5p-joubelui-button, .h5peditor .h5p-joubelui-button, .h5p-joubelui-button {
-  background: #323c64 !important; }
+.h5p-container html.h5p-iframe, .h5p-container html.h5p-iframe > body {
+  overflow-y: hidden; }
+.h5p-container .h5p-no-frame .questionset .h5p-question > * {
+  line-height: 1.35; }
 
 /*-------------------------------------
 ** Quiz

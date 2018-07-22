@@ -455,3 +455,66 @@ div.h5p-fullscreen {
 .h5p-dialog-ok-button:active {
   background: #eeffee;
 }
+
+
+
+/* custom styles */
+.h5p-content {
+	font-family: Helvetica, Arial, sans-serif;
+}
+.h5p-question-image {
+	text-align: center!important;
+}
+.h5p-multichoice .h5p-alternative-container .h5p-alternative-inner [content="Gmail"] {
+	background-color: red!important;
+}
+
+.h5p-question-introduction {
+	line-height: 1.34!important;
+}
+
+
+
+.h5p-joubelui-button {
+	background: #1ccfc9!important;
+	border: 2px solid #323c64!important;
+	box-shadow: none!important;
+}
+.h5p-joubelui-button:hover, .h5p-joubelui-button:active {
+	box-shadow: none!important;
+	background: #323c64!important;
+}
+.questionset-results .result-text, .questionset-results .feedback-section .feedback-text {
+	color: #323c64!important;
+}
+
+.h5p-answer .h5p-alternative-container {
+	background-repeat: no-repeat!important;
+	background-position: 2em center!important;
+	background-size: 16%!important;
+	text-indent: -9999px!important;
+	padding: 10px!important;
+}
+.h5p-answer:nth-child(1) .h5p-alternative-container {
+	background-image: url('../../../images/logo-dropbox.png')!important;
+}
+.h5p-answer:nth-child(2) .h5p-alternative-container {
+	background-image: url('../../../images/logo-gmail.png')!important;
+}
+.h5p-answer:nth-child(3) .h5p-alternative-container {
+	background-image: url('../../../images/logo-wunderlist.png')!important;
+}
+.h5p-answer:nth-child(4) .h5p-alternative-container {
+	background-image: url('../../../images/logo-prezi.png')!important;
+}
+.h5p-answer:nth-child(5) .h5p-alternative-container {
+	background-image: url('../../../images/logo-lync.png')!important;
+}
+
+
+.h5p-iframe {
+	overflow: hidden;
+	height: auto;
+	outline: 0;
+	border: none;
+}

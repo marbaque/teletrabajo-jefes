@@ -774,7 +774,6 @@ dl {
 	&.actividad {
 		.accordion-panel {
 			display: block;
-			background-color: #fff;
 		}
 	}
 }
@@ -791,18 +790,16 @@ dl {
 /////////////////////////////////////////////////////h5p
 .h5p-container {
 	@extend .caso;
-}
-.h5p-actions {
-	display: none;
-}
-
-.h5p-link {
-	display: none!important;
-}
-
-.h5peditor .ui-dialog .h5p-joubelui-button, .h5peditor .h5p-joubelui-button, .h5p-joubelui-button {
-		background: $color_secundario!important;
+	
+	html.h5p-iframe, html.h5p-iframe > body {
+		overflow-y: hidden;
 	}
+	
+	.h5p-no-frame .questionset .h5p-question > * {
+		line-height: 1.35;
+	}
+}
+
 
 
 /*-------------------------------------
