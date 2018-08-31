@@ -1,6 +1,6 @@
 # Libro multimedia Guía de teletrabajo para jefes
 La Guía de teletrabajo para jefes ha sido elaborada para todas aquellas personas involucradas en la
-administración de talento humano e interesadas en conocer sobre el tema para así administrar, en un futuro,
+gestión del talento humano e interesadas en conocer sobre el tema para así administrar, en un futuro,
 a funcionarios teletrabajadores.
 
 Como podrá observar, este material está conformado por una introducción, seis capítulos, un glosario y las 
