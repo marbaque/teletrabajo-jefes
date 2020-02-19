@@ -15,7 +15,7 @@ Nota: esta Guía emplea el término teletrabajador, refiriéndose tanto al géne
 * Fundación de la Universidad Estatal a Distancia para el Desarrollo y Promoción de la Educación a Distancia (FUNDEPREDI).
 * Vicerrectoría de Planificación.
 * Programa de teletrabajo.
-* Productor académico: Juan Diego Delgado Vargas.
+* Productor: Juan Diego Delgado Vargas.
 * Adaptación de contenido: Adriana Oviedo Vega y Alejandra Arce Romero, Programa de teletrabajo de la UNED de Costa Rica.
 * Supervisión: Edgar Castro, Vicerrector de Planificación de la UNED de Costa Rica.
 * Revisión filológica: Mauren González Jones.
