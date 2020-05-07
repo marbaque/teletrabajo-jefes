@@ -24,6 +24,9 @@ mariobadilla.com
     background-position-x: 1344px; }
   100% {
     background-position-x: 0; } }
+.oculto {
+  display: none; }
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache

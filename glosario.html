@@ -43,8 +43,8 @@
 	  <header id="site-navigation" class="site-header">
 
 		  <div class="branding" role="heading">
-			  <a href="index.html" class="logo" aria-hidden="true"></a>
-			  <p class="title"><a href="index.html" title="Bienvenida">Guía de teletrabajo para jefes</a></p>
+			  <span class="logo" aria-hidden="true"></span>
+			  <h1 class="title">Guía de teletrabajo para jefes</h1>
 		  </div>
 		  <button id="nav-trigger" class="toggle-button">Menu</button>
 		  <nav class="nav-menu" role="navigation">
@@ -52,12 +52,8 @@
 				  <p class="title">Guía de teletrabajo para jefes</p>
 			  </div>
 			  <ul>
-				  <li><a href="index.html#capitulos" title="Capítulos">Capítulos</a></li>
-				  <li><a href="glosario.html" title="Glosario" class="active">Glosario</a></li>
-				  <li><a href="referencias.html" title="Referencias">Referencias</a></li>
-				  <li><a href="guia-pdf.html" title="Guía de teletrabajo para jefes en PDF">Versión PDF</a></li>
-				  <li class="hide-md"><a href="creditos.html" title="Créditos">Créditos</a></li>
-			  </ul>
+				<li><a style="cursor: pointer" onclick="goBack()">&larr; Regresar</a></li>
+			</ul>
 		  </nav>
 	  </header>
   </div>
@@ -109,7 +105,7 @@
 					
 					<dt>Soporte técnico</dt>
 					<dd>Dependencia a la que puede acudir el colaborador cuando los medios tecnológicos o las telecomunicaciones no satisfagan los requerimientos necesarios para realizar el teletrabajo.</dd>
-				</dl>
+				</dl>				
 		
 	    </div><!-- column -->
 	    
@@ -125,7 +121,7 @@
   <!-- aqui termina contenido principal -->
   <a href="#top" id="topbutton" class="backtop" title="Scroll hasta arriba" aria-hidden="true">&#8673; Inicio</a>
   <!-- pie de página -->
-  <div id="footer" class="footer u-full-width">
+  <div id="footer" class="footer u-full-width oculto">
 	  <div class="container">
 		  <div class="row">
 			 <nav class="footer-menu" role="navigation">
@@ -149,5 +145,10 @@
   <script src="js/navigation.js"></script>
   <link href="dist/css/lightbox.css" rel="stylesheet">
   <script src="dist/js/lightbox.js"></script>
+  <script>
+	function goBack() {
+		window.history.back();
+	}
+	</script>
 </body>
 </html>

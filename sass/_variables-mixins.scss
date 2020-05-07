@@ -78,3 +78,7 @@ $public_path: "../";
   background-image: url('#{$public_path}images/#{$name}.png');
   background-image: none, url('#{$public_path}images/#{$name}.svg');
 }
+
+.oculto {
+	display: none;
+}
